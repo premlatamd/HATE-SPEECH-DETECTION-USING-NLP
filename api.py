@@ -24,7 +24,7 @@ def predict(text: str, model_type: str):
         result = predict_hate_svm(text)
         
     else:
-        return {"error": "Invalid Model"}
+        return {"error": "invalid Model"}
 
     return {
         "prediction": result[0]
