@@ -1,5 +1,8 @@
 import pickle
 from src.preprocess import clean_text
+from sklearn.svm import SVC
+
+svm_model = SVC(probability=True)
 
 with open("models/svm_model.pkl","rb") as f:
     model = pickle.load(f)
