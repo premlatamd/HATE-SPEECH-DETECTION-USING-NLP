@@ -24,6 +24,7 @@ if st.button("Predict") :
         with open("models/accuracy.txt","r") as f:
             accuracy=float(f.read())
         
+        
     elif selected_model=="RANDOM FOREST":
         with open("models/rf_accuracy.txt","r") as f:
             accuracy=float(f.read())
@@ -33,7 +34,7 @@ if st.button("Predict") :
             accuracy = float(f.read())
 
 
-    st.success(f"Prediction: {result['prediction']}\n\nThe Accuracy is {accuracy*100:.2f}%"
+    st.success(f"Prediction: {result['prediction']}\n\nThe Accuracy is {accuracy*100:.2f}%\n\nThe Confidence level is {result['confidence']}"
 )
     
 
