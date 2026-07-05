@@ -21,9 +21,9 @@ def rf_predict_hate(text):
         1: "Offensive Language",
         2: "Neither"
     }
+    confidence = max(probs) * 100
 
-    return labels[prediction], probs
-
+    return labels[prediction], round(confidence,2)
 
 if __name__ == "__main__":
 
