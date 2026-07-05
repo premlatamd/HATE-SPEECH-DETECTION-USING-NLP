@@ -24,6 +24,7 @@ def predict_hate_svm(text):
         1: "Offensive Language",
         2: "Neither"
     }
+    print(model.probability)
     confidence = max(probs) * 100
 
     return labels[prediction], round(confidence,2)
