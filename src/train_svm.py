@@ -31,7 +31,7 @@ model = SVC(
 model.fit(X_train,y_train)
 acc=evaluate_model(model,X_test,y_test)
 
-with open("models/rf_accuracy.txt","w") as f:
+with open("models/svm_accuracy.txt","w") as f:
     f.write(str(acc))
 
 y_pred = model.predict(X_test)

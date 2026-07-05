@@ -34,7 +34,7 @@ if st.button("Predict") :
             accuracy = float(f.read())
 
 
-    st.success(f"Prediction: {result['prediction']}\n\nThe Accuracy is {accuracy*100:.2f}%\n\nThe Confidence level is {result['confidence']}"
+    st.success(f"Prediction: {result['prediction']}\n\nThe Accuracy is {accuracy*100:.2f}%\n\nThe Confidence level is {result['confidence']}%"
 )
     
 
