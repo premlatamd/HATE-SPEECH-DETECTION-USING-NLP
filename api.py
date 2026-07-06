@@ -27,5 +27,5 @@ def predict(text: str, model_type: str):
         return {"error": "invalid Model"}
 
     return {
-        "prediction": result[0],"confidence":result[1]
+        "prediction": result[0]
     }

@@ -25,8 +25,8 @@ def predict_hate_svm(text):
         2: "Neither"
     }
     
-    confidence = float(probs.max() * 100)
+    #confidence = float(probs.max() * 100)
 
-    return labels[int(prediction)], round(confidence,2)
+    return labels[int(prediction)],probs
 
     

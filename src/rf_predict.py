@@ -23,7 +23,7 @@ def rf_predict_hate(text):
     }
     confidence = max(probs) * 100
 
-    return labels[prediction], round(confidence,2)
+    return labels[prediction], probs
 
 if __name__ == "__main__":
 
