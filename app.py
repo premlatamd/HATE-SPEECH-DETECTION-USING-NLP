@@ -16,7 +16,12 @@ selected_model=st.radio("SELECTED MODEL",("LOGISTIC REGRESSION","SVM","RANDOM FO
 if st.button("Predict") :
 
     #response=requests.get("http://127.0.0.1:8000/predict",params={"text":user_input,"model_type":selected_model})
-    response=requests.get("https://hate-speech-detection-using-nlp.onrender.com/predict",params={"text":user_input,"model_type":selected_model})
+    response=requests.get("https://hate-speech-detection-using-nlp-1.onrender.com/predict",params={"text":user_input,"model_type":selected_model})
+    
+
+    print(response.status_code)
+    print(response.text)
+
 
     result=response.json()
     #result=rf_predict_hate(user_input)
